@@ -4,7 +4,7 @@
     --text-grey: #1f1f1f;
     --text-light-grey: #545454;
     --dark: #000000;
-    --dark-low: rgba(0, 0, 0, 0.85);
+    --dark-low: rgba(0, 0, 0, 0.80);
 }
 *,*::before,*::after{
     box-sizing: border-box;
