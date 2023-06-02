@@ -13,7 +13,7 @@ html{
     overflow-x: hidden !important;
 } 
 body{
-    min-width: 100%;
+    width: 100%;
 }
 header{
     z-index: 1;
@@ -85,4 +85,16 @@ header{
 }
 .navbar-nav a{
     font-weight: 500;
+}
+.hamburger-button{
+    width: 30px;
+    aspect-ratio: 1/1;
+    margin: 0 !important;
+    gap: 4px;
+}
+.hamburger-button>*{
+    width: 20px;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 20px;
 }
