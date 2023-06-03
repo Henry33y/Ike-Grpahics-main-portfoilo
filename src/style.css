@@ -13,13 +13,14 @@ html{
     overflow-x: hidden !important;
 } 
 body{
-    width: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 header{
     z-index: 1;
 }
 .hero{
-    padding-top: 11em;
+    padding-top: 13em;
     position: relative;
     background-color: var(--dark-low);
 }
@@ -97,4 +98,41 @@ header{
     height: 2px;
     background-color: var(--white);
     border-radius: 20px;
+}
+.hero-text>*{
+    opacity: 0;
+}
+.hero-text>:nth-child(1){
+    animation-fill-mode: forwards;
+    animation-name: loadIn;
+    animation-delay: 500ms;
+    animation-duration: 700ms;
+}
+.hero-text>:nth-child(2){
+    animation-fill-mode: forwards;
+    animation-name: loadIn;
+    animation-duration: 700ms;
+    animation-delay: 700ms;
+}
+.hero-text>:nth-child(3){
+    animation-fill-mode: forwards;
+    animation-name: loadIn;
+    animation-duration: 700ms;
+    animation-delay: 900ms;
+}
+.hero-text>:nth-child(4){
+    animation-fill-mode: forwards;
+    animation-name: loadIn;
+    animation-duration: 700ms;
+    animation-delay: 1100ms;
+}
+
+@keyframes loadIn{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
