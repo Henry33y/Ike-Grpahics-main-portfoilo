@@ -4,9 +4,10 @@
     --text-grey: #1f1f1f;
     --text-light-grey: #545454;
     --dark: #000000;
-    --dark-low: rgba(0, 0, 0, 0.80);
+    --dark-low: rgba(0, 0, 0, 0.65);
+    --line-bg-color: #e5e5e5;
 }
-*,*::before,*::after{
+*,::before,::after{
     box-sizing: border-box;
 }
 html{
@@ -125,6 +126,44 @@ header{
     animation-name: loadIn;
     animation-duration: 700ms;
     animation-delay: 1100ms;
+}
+.circleIcon-container{
+    position: relative;
+}
+.circle-icon{
+    width: 8px;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--orange);
+    position: absolute;
+    background-color: #FFF;
+}
+.line{
+    width: 130px;
+    height: 3px;
+    background-color: var(--line-bg-color);
+}
+.back2top{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--dark);
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s ease-in-out;
+}
+.back2top.active{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+.back2top svg{
+    transform: scale(0.7);
+    fill: var(--white);
+}
+.back2top:hover{
+    background-color: var(--orange);
 }
 
 @keyframes loadIn{
