@@ -6,6 +6,7 @@
     --dark: #000000;
     --dark-low: rgba(0, 0, 0, 0.65);
     --line-bg-color: #e5e5e5;
+    --light-bg-color: #F9F9F9;;
 }
 *,::before,::after{
     box-sizing: border-box;
@@ -19,6 +20,7 @@ body{
 }
 header{
     z-index: 1;
+    transition: 300ms;
 }
 .hero{
     padding-top: 13em;
@@ -36,6 +38,10 @@ header{
     z-index: -1;
     position: absolute;
     top: 0;
+}
+ul{
+    list-style-type: none;
+    padding-inline-start: 0;
 }
 .hero h1{
     font-weight: 700;
@@ -66,6 +72,9 @@ header{
     width: 300px !important;
     /* margin-bottom: 1em; */
 }
+.img-container2{
+    width: 200px;
+}
 .navbar-nav li{
     position: relative;
 }
@@ -73,7 +82,7 @@ header{
     content: '';
     background-color: var(--orange);
     width: 100%;
-    height: 2px;
+    height: 3px;
     border-radius: 20px;
     position: absolute;
     bottom: 4px;
@@ -165,7 +174,19 @@ header{
 .back2top:hover{
     background-color: var(--orange);
 }
-
+.whitebg{
+    background-color: rgba(255, 255, 255,0.8);
+    backdrop-filter: blur(8px);
+}
+header.whitebg *{
+    color: var(--text-grey) !important;
+}
+.services{
+    background-color: var(--light-bg-color);
+}
+.services>.row>*{
+    background-color: white !important;
+}
 @keyframes loadIn{
     from{
         transform: translateX(100%);
