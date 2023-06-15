@@ -265,6 +265,15 @@ header.whitebg *{
 .reveal:hover .headText{
     color: var(--orange);
 }
+.col .card>:first-child{
+    overflow: hidden;
+}
+.col .card>:first-child>img{
+    transition: 300ms;
+}
+.col .card >:first-child:hover > img{
+    transform: scale(1.05);
+}
 @keyframes loadIn{
     from{
         transform: translateX(100%);
