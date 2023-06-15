@@ -13,6 +13,7 @@
 }
 html{
     overflow-x: hidden !important;
+    scroll-padding-top: 80px;
 } 
 body{
     overflow-x: hidden;
@@ -92,6 +93,9 @@ ul{
     transform: scaleX(0);
 }
 .navbar-nav li:hover::after{
+    transform: scaleX(1);
+}
+.mynav-link.clicked::after{
     transform: scaleX(1);
 }
 .navbar-nav a{
@@ -175,11 +179,11 @@ ul{
     background-color: var(--orange);
 }
 .whitebg{
-    background-color: rgba(255, 255, 255,0.8);
+    background-color: hsla(0, 0%, 0%,0.8);
     backdrop-filter: blur(8px);
 }
 header.whitebg *{
-    color: var(--text-grey) !important;
+    color: var(--light-bg-color) !important;
 }
 .services{
     background-color: var(--light-bg-color);
@@ -187,12 +191,95 @@ header.whitebg *{
 .services>.row>*{
     background-color: white !important;
 }
+.wrapper{
+    max-width: 950px;
+    border: 1px solid;
+    overflow: hidden;
+}
+.myCarousel{
+    display: flex;
+    min-width: 100vw;
+    padding: 2em;
+    overflow: auto;
+    border: 1px solid var(--bs-primary);
+}
+.myCarousel>*{
+    width: 400px;
+    border: 1px solid;
+}
+.column1,.column2,.column3{
+    opacity: 0;
+    border-top: 6px solid var(--line-bg-color) !important;
+    transition: 400ms;
+}
+.column1{
+    animation-duration: 700ms;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+}
+.column2{
+    animation-duration: 700ms;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+    border-top-color: var(--orange) !important;
+}
+.column3{
+    animation-duration: 700ms;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
+}
+.column2 .headText{
+    color: var(--orange);
+}
+.reveal>div{
+    transition: 400ms;
+}
+.reveal>div:hover{
+    border-left: 4px solid var(--orange);
+    background-color: var(--line-bg-color);
+}
+.reveal>button{
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    font-size: 1.3em;
+}
+.reveal>:first-child{
+    font-size: 2em;
+}
+.reveal>:nth-child(2){
+    font-size: 1.2em;
+}
+.bigText{
+    font-size: 3em;
+    font-weight: 600;
+}
+.middleText{
+    font-size: 1.3em;
+}
+.reveal:hover{
+    border-top-color: var(--orange) !important;
+}
+.headText{
+    letter-spacing: 3px;
+}
+.reveal:hover .headText{
+    color: var(--orange);
+}
 @keyframes loadIn{
     from{
         transform: translateX(100%);
     }
     to{
         transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes reveal{
+    from{
+        transform: translateY(50%);
+    }
+    to{
+        transform: translateY(0);
         opacity: 1;
     }
 }
