@@ -22,17 +22,7 @@ window.addEventListener('scroll', () => {
 
     }
 })
-leftBtn.addEventListener('click',()=>{
-    console.log('left');
-    slider.style.transform='translateX(-300px)'
-    
-    
-})
-rightBtn.addEventListener('click',()=>{
-    console.log('right');
-    slider.style.transform='translateX(300px)'
 
-})
 for(let i=0;i<navLinks.length;i++){
     navLinks[i].addEventListener('click',()=>{
         for(let j=0;j<navLinks.length;j++){
